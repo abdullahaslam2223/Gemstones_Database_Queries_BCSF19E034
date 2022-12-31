@@ -1,7 +1,7 @@
 USE [Gemstones_BCSF19E034]
 GO
 
-/****** Object:  StoredProcedure [dbo].[GS_Delete_Admin]    Script Date: 12/18/2022 8:01:14 PM ******/
+/****** Object:  StoredProcedure [dbo].[GS_Delete_Admin]    Script Date: 12/31/2022 10:12:01 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,8 +18,6 @@ CREATE PROCEDURE [dbo].[GS_Delete_Admin]
 AS
 BEGIN
 	SET NOCOUNT ON;
-	delete from tbl_admin_users where user_id = @id;
+	delete from tbl_admin_users where user_id = @id and super != 1;
 END
 GO
-
-
