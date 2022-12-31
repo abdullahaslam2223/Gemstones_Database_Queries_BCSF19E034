@@ -1,7 +1,7 @@
 USE [Gemstones_BCSF19E034]
 GO
 
-/****** Object:  Table [dbo].[tbl_admin_users]    Script Date: 12/18/2022 3:46:06 PM ******/
+/****** Object:  Table [dbo].[tbl_admin_users]    Script Date: 12/31/2022 4:38:25 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -15,6 +15,7 @@ CREATE TABLE [dbo].[tbl_admin_users](
 	[user_email] [varchar](50) NOT NULL,
 	[user_password] [varchar](50) NOT NULL,
 	[status] [bit] NOT NULL,
+	[image_name] [varchar](100) NULL,
  CONSTRAINT [PK_tbl_admin_users] PRIMARY KEY CLUSTERED 
 (
 	[user_id] ASC
