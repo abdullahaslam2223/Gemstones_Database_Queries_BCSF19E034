@@ -1,7 +1,7 @@
 USE [Gemstones_BCSF19E034]
 GO
 
-/****** Object:  Table [dbo].[tbl_products_stone]    Script Date: 12/18/2022 6:07:21 PM ******/
+/****** Object:  Table [dbo].[tbl_products_stone]    Script Date: 1/9/2023 12:24:33 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -11,7 +11,7 @@ GO
 CREATE TABLE [dbo].[tbl_products_stone](
 	[stone_id] [bigint] IDENTITY(1,1) NOT NULL,
 	[stone_name] [varchar](50) NOT NULL,
-	[stone_price] [int] NOT NULL,
+	[stone_price] [money] NOT NULL,
 	[stone_description] [nvarchar](150) NULL,
 	[stone_image_url] [nvarchar](100) NULL,
 	[stone_category_id] [int] NULL,
@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[tbl_products_stone](
 	[stone_dispersion] [float] NULL,
 	[stone_specific_gravity] [float] NULL,
 	[stone_density] [float] NULL,
+	[stone_quantity] [int] NULL,
  CONSTRAINT [PK_tbl_products_stone] PRIMARY KEY CLUSTERED 
 (
 	[stone_id] ASC
