@@ -1,7 +1,7 @@
 USE [Gemstones_BCSF19E034]
 GO
 
-/****** Object:  Table [dbo].[tbl_add_to_cart_temp]    Script Date: 1/14/2023 3:08:28 PM ******/
+/****** Object:  Table [dbo].[tbl_add_to_cart_temp]    Script Date: 1/14/2023 3:46:55 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,6 +12,7 @@ CREATE TABLE [dbo].[tbl_add_to_cart_temp](
 	[temp_id] [int] IDENTITY(1,1) NOT NULL,
 	[user_unique_key] [varchar](100) NOT NULL,
 	[product_id] [bigint] NULL,
+	[created_at] [datetime] NOT NULL,
  CONSTRAINT [PK_tbl_add_to_cart_temp] PRIMARY KEY CLUSTERED 
 (
 	[temp_id] ASC
